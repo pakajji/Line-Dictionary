@@ -1,0 +1,14 @@
+service: lambda
+provider:
+  name: aws
+  runtime: nodejs18.x
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http: 
+          path: 
+          method: get
+      - http:
+          path: webhook
+          method: post
